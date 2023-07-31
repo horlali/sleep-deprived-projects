@@ -82,4 +82,4 @@ jobs:
       #              run test suite
       #----------------------------------------------
       - name: Run test
-        run: ./scripts/run-tests.sh
+        run: ./scripts/run-tests.sh --actions
