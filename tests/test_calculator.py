@@ -61,28 +61,4 @@ def test_gpa_calculator_calculate_gpa():
     calculator.add_course(science_course)
     calculator.add_course(english_course)
 
-    # assert calculator.calculate_gpa() == pytest.approx(
-    #     3.25, 0.01
-    # )  # Approximate comparison due to float precision
-
-
-# def test_gpa_calculator_calculate_gpa_with_no_courses():
-#     calculator = GPACalculator()
-#     assert calculator.calculate_gpa() == 0.0
-
-
-# def test_gpa_calculator_calculate_gpa_with_no_completed_courses():
-#     calculator = GPACalculator()
-
-#     math_course = Course("Math", 4)
-#     math_course.set_grade("B+")
-
-#     science_course = Course("Science", 3, is_elective=True)
-
-#     english_course = Course("English", 3)
-
-#     calculator.add_course(math_course)
-#     calculator.add_course(science_course)
-#     calculator.add_course(english_course)
-
-#     assert calculator.calculate_gpa() == 0.0
+    assert calculator.calculate_gpa() == 3.2
