@@ -1,6 +1,7 @@
 import streamlit as st
+from calculator import GRADE_POINTS, Course, GPACalculator
 
-from gpa_calculator.server.calculator import GRADE_POINTS, Course, GPACalculator
+# ======================================================================================
 
 st.set_page_config(page_title="GPA Calculator", page_icon="👋", layout="wide")
 

@@ -1,6 +1,4 @@
-import pytest
-
-from gpa_calculator.server.calculator import Course, GPACalculator
+from gpa_calculator.app import Course, GPACalculator
 
 
 # Test Course class
