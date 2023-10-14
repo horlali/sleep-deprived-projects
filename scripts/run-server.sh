@@ -7,7 +7,7 @@ cd $(dirname $0)/..
 
 NAME="GPA-Calculator"
 PROJECT_DIR="${PWD}/gpa_calculator"
-MODULE_NAME="app.py"
+MODULE_NAME="client/app.py"
 PORT=8501
 
 echo "Starting ${NAME} client..."

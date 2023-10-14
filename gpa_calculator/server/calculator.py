@@ -39,6 +39,8 @@ class GPACalculator:
                     total_credit_points += course.get_grade_point() * course.credit
                     total_credits += course.credit
 
-        gpa = total_credit_points / total_credits
+        try:
+            return total_credit_points / total_credits
 
-        return gpa
+        except ZeroDivisionError:
+            return 0.0

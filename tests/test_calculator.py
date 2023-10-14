@@ -1,4 +1,4 @@
-from gpa_calculator.app import Course, GPACalculator
+from gpa_calculator.client.app import Course, GPACalculator
 
 
 # Test Course class
