@@ -1,36 +1,18 @@
 import streamlit as st
 
-from gpa_calculator.server.calculator import GRADE_POINTS, Course, GPACalculator
+from gpa_calculator.server.calculator import GRADE_POINTS, GPACalculator
+from gpa_calculator.server.courses import *
+
+# ======================================================================================
 
 st.set_page_config(page_title="GPA Calculator", page_icon="👋", layout="wide")
 
 
-def main():
+def gpa_calculator_interface():
     st.title(
         "MSc Computer Science GPA Calculator",
     )
     st.divider()
-
-    # Semester 1
-    research_methods = Course("Research Methods", 3)
-    adv_dsa = Course("Advanced Data Structures and Algorithms", 3)
-    principles_of_wms = Course("Principles of Wireless and Mobile System", 3)
-    adv_computer_networks = Course("Advanced Computer Networks", 3, is_elective=True)
-    adv_database_systems = Course("Advanced Database Systems", 3, is_elective=True)
-    adv_operating_systems = Course("Advanced Operating Systems", 3, is_elective=True)
-    hci = Course("Human Computer Interaction", 3, is_elective=True)
-
-    # Semester 2
-    msc_dissertation = Course("MSc Dissertation", 12)
-    seminar_1 = Course("Seminar 1", 3)
-    adv_software_engineering = Course("Advanced Software Engineering", 3)
-    distributed_systems = Course("Distributed Systems", 3)
-    intelligent_systems = Course("Intelligent Systems", 3)
-    bioinformatics = Course("Bioinformatics", 3, is_elective=True)
-    adv_computer_vision = Course("Advanced Computer Vision", 3, is_elective=True)
-    wireless_system_design = Course("Wireless System Design", 3, is_elective=True)
-    network_security = Course("Network Security", 3, is_elective=True)
-    computational_mathematics = Course("Computational Mathematics", 3, is_elective=True)
 
     # Initialize the GPA calculators
     gpa_calculator_semester1 = GPACalculator()
@@ -168,6 +150,7 @@ def main():
 
         st.divider()
 
+    # Calculate GPA for all semesters
     with st.sidebar:
         st.markdown("### Overall GPA")
         st.divider()
@@ -186,4 +169,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    gpa_calculator_interface()

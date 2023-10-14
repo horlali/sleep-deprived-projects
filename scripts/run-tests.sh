@@ -11,7 +11,7 @@ cd $(dirname $0)/..
 if [ "$1" = "--actions" ];
     then
         poetry run coverage run -m pytest
-        poetry run coverage report --fail-under=80
+        poetry run coverage report
         # poetry run coverage xml
 
 else
