@@ -8,6 +8,9 @@ from gpa_calculator.client.components import (
 from gpa_calculator.server.calculator import GRADE_POINTS, GPACalculator
 from gpa_calculator.server.courses import *
 
+st.set_page_config(page_title="GPA Calculator", page_icon="👋", layout="wide")
+markdown_header(header="h1", text="MSc Computer Science GPA Calculator")
+st.divider()
 
 def gpa_calculator_interface():
     # ================================================================================ #
@@ -57,10 +60,6 @@ def gpa_calculator_interface():
     gpa_calculator_all_semesters.add_course(network_security)
     gpa_calculator_all_semesters.add_course(computational_mathematics)
     # ================================================================================ #
-
-    st.set_page_config(page_title="GPA Calculator", page_icon="👋", layout="wide")
-    markdown_header(header="h1", text="MSc Computer Science GPA Calculator")
-    st.divider()
 
     markdown_header(header="h3", text="Semester 1")
     st.divider()
