@@ -64,16 +64,45 @@ def gpa_calculator_interface():
     st.markdown(
         "<h3 style='text-align: center;'>Semester 1</h1>", unsafe_allow_html=True
     )
+
     st.divider()
+
+    header_col1, header_col2, header_col3, header_col4, header_col5 = st.columns(
+        [
+            0.2,
+            0.05,
+            0.1,
+            0.1,
+            0.1,
+        ]
+    )
+
+    with header_col1:
+        st.write("##### Course")
+
+    with header_col2:
+        st.write("##### Elective")
+
+    with header_col3:
+        st.write("##### Grade")
+
+    with header_col4:
+        st.write("##### Credit")
+
+    with header_col5:
+        st.write("##### Grade Point")
+
+    st.divider()
+
     for course in gpa_calculator_semester1.courses:
-        col1, col2, col3, col4, col5 = st.columns([0.5, 0.15, 0.17, 0.1, 0.15])
+        col1, col2, col3, col4, col5 = st.columns([0.2, 0.05, 0.1, 0.1, 0.1])
 
         with col1:
             st.write(f"##### {course.name}")
 
         with col2:
             if course.is_elective:
-                st.write("Did you take this elective?")
+                st.write("Taken?")
                 course.took_elective = st.checkbox(
                     " ", key=f"took_elective_{course.name}"
                 )
@@ -111,14 +140,14 @@ def gpa_calculator_interface():
     )
     st.divider()
     for course in gpa_calculator_semester2.courses:
-        col1, col2, col3, col4, col5 = st.columns([0.5, 0.15, 0.17, 0.1, 0.2])
+        col1, col2, col3, col4, col5 = st.columns([0.2, 0.05, 0.1, 0.1, 0.1])
 
         with col1:
             st.write(f"##### {course.name}")
 
         with col2:
             if course.is_elective:
-                st.write("Did you take this elective?")
+                st.write("Taken?")
                 course.took_elective = st.checkbox(
                     " ", key=f"took_elective_{course.name}"
                 )
@@ -152,7 +181,7 @@ def gpa_calculator_interface():
 
     # Calculate GPA for all semesters
     with st.sidebar:
-        st.markdown("### Overall GPA")
+        st.markdown("# Overall GPA")
         st.divider()
 
     with st.sidebar.expander("GPA for Semester 1", expanded=True):

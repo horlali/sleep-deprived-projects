@@ -1,6 +1,6 @@
-# Semester 1
 from gpa_calculator.server.calculator import Course
 
+# Semester 1
 research_methods = Course("Research Methods", 3)
 adv_dsa = Course("Advanced Data Structures and Algorithms", 3)
 principles_of_wms = Course("Principles of Wireless and Mobile System", 3)
