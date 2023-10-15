@@ -8,63 +8,60 @@ from gpa_calculator.client.components import (
 from gpa_calculator.server.calculator import GRADE_POINTS, GPACalculator
 from gpa_calculator.server.courses import *
 
-# ================================================================================ #
-
-# Initialize the GPA calculators
-gpa_calculator_semester1 = GPACalculator()
-gpa_calculator_semester2 = GPACalculator()
-gpa_calculator_all_semesters = GPACalculator()
-
-# Add Semester 1 courses to the GPA calculator
-gpa_calculator_semester1.add_course(research_methods)
-gpa_calculator_semester1.add_course(adv_dsa)
-gpa_calculator_semester1.add_course(principles_of_wms)
-gpa_calculator_semester1.add_course(adv_computer_networks)
-gpa_calculator_semester1.add_course(adv_database_systems)
-gpa_calculator_semester1.add_course(adv_operating_systems)
-gpa_calculator_semester1.add_course(hci)
-
-# Add Semester 2 courses to the GPA calculator
-gpa_calculator_semester2.add_course(msc_dissertation)
-gpa_calculator_semester2.add_course(seminar_1)
-gpa_calculator_semester2.add_course(adv_software_engineering)
-gpa_calculator_semester2.add_course(distributed_systems)
-gpa_calculator_semester2.add_course(intelligent_systems)
-gpa_calculator_semester2.add_course(bioinformatics)
-gpa_calculator_semester2.add_course(adv_computer_vision)
-gpa_calculator_semester2.add_course(wireless_system_design)
-gpa_calculator_semester2.add_course(network_security)
-gpa_calculator_semester2.add_course(computational_mathematics)
-
-# Add all courses to the GPA calculator for overall GPA
-gpa_calculator_all_semesters.add_course(research_methods)
-gpa_calculator_all_semesters.add_course(adv_dsa)
-gpa_calculator_all_semesters.add_course(principles_of_wms)
-gpa_calculator_all_semesters.add_course(adv_computer_networks)
-gpa_calculator_all_semesters.add_course(adv_database_systems)
-gpa_calculator_all_semesters.add_course(adv_operating_systems)
-gpa_calculator_all_semesters.add_course(hci)
-
-gpa_calculator_all_semesters.add_course(msc_dissertation)
-gpa_calculator_all_semesters.add_course(seminar_1)
-gpa_calculator_all_semesters.add_course(adv_software_engineering)
-gpa_calculator_all_semesters.add_course(distributed_systems)
-gpa_calculator_all_semesters.add_course(intelligent_systems)
-gpa_calculator_all_semesters.add_course(bioinformatics)
-gpa_calculator_all_semesters.add_course(adv_computer_vision)
-gpa_calculator_all_semesters.add_course(wireless_system_design)
-gpa_calculator_all_semesters.add_course(network_security)
-gpa_calculator_all_semesters.add_course(computational_mathematics)
-
-# ================================================================================ #
-
-
 st.set_page_config(page_title="GPA Calculator", page_icon="👋", layout="wide")
 markdown_header(header="h1", text="MSc Computer Science GPA Calculator")
 st.divider()
 
 
 def gpa_calculator_interface():
+    # ================================================================================ #
+    # Initialize the GPA calculators
+    gpa_calculator_semester1 = GPACalculator()
+    gpa_calculator_semester2 = GPACalculator()
+    gpa_calculator_all_semesters = GPACalculator()
+
+    # Add Semester 1 courses to the GPA calculator
+    gpa_calculator_semester1.add_course(research_methods)
+    gpa_calculator_semester1.add_course(adv_dsa)
+    gpa_calculator_semester1.add_course(principles_of_wms)
+    gpa_calculator_semester1.add_course(adv_computer_networks)
+    gpa_calculator_semester1.add_course(adv_database_systems)
+    gpa_calculator_semester1.add_course(adv_operating_systems)
+    gpa_calculator_semester1.add_course(hci)
+
+    # Add Semester 2 courses to the GPA calculator
+    gpa_calculator_semester2.add_course(msc_dissertation)
+    gpa_calculator_semester2.add_course(seminar_1)
+    gpa_calculator_semester2.add_course(adv_software_engineering)
+    gpa_calculator_semester2.add_course(distributed_systems)
+    gpa_calculator_semester2.add_course(intelligent_systems)
+    gpa_calculator_semester2.add_course(bioinformatics)
+    gpa_calculator_semester2.add_course(adv_computer_vision)
+    gpa_calculator_semester2.add_course(wireless_system_design)
+    gpa_calculator_semester2.add_course(network_security)
+    gpa_calculator_semester2.add_course(computational_mathematics)
+
+    # Add all courses to the GPA calculator for overall GPA
+    gpa_calculator_all_semesters.add_course(research_methods)
+    gpa_calculator_all_semesters.add_course(adv_dsa)
+    gpa_calculator_all_semesters.add_course(principles_of_wms)
+    gpa_calculator_all_semesters.add_course(adv_computer_networks)
+    gpa_calculator_all_semesters.add_course(adv_database_systems)
+    gpa_calculator_all_semesters.add_course(adv_operating_systems)
+    gpa_calculator_all_semesters.add_course(hci)
+
+    gpa_calculator_all_semesters.add_course(msc_dissertation)
+    gpa_calculator_all_semesters.add_course(seminar_1)
+    gpa_calculator_all_semesters.add_course(adv_software_engineering)
+    gpa_calculator_all_semesters.add_course(distributed_systems)
+    gpa_calculator_all_semesters.add_course(intelligent_systems)
+    gpa_calculator_all_semesters.add_course(bioinformatics)
+    gpa_calculator_all_semesters.add_course(adv_computer_vision)
+    gpa_calculator_all_semesters.add_course(wireless_system_design)
+    gpa_calculator_all_semesters.add_course(network_security)
+    gpa_calculator_all_semesters.add_course(computational_mathematics)
+    # ================================================================================ #
+
     markdown_header(header="h3", text="Semester 1")
     st.divider()
 
