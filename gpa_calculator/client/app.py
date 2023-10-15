@@ -165,15 +165,15 @@ def gpa_calculator_interface():
 
     with st.sidebar.expander("GPA for Semester 1", expanded=True):
         gpa_semester1 = gpa_calculator_semester1.calculate_gpa()
-        st.success(f"Semester 1 GPA is:    {gpa_semester1:.2f}")
+        st.success(f"Semester 1 GPA is:  \n{gpa_semester1:.2f}")
 
     with st.sidebar.expander("GPA for Semester 2", expanded=True):
         gpa_semester2 = gpa_calculator_semester2.calculate_gpa()
-        st.success(f"Semester 2 GPA is:    {gpa_semester2:.2f}")
+        st.success(f"Semester 2 GPA is:  \n{gpa_semester2:.2f}")
 
     with st.sidebar.expander("Total GPA", expanded=True):
         gpa_all_semesters = gpa_calculator_all_semesters.calculate_gpa()
-        st.success(f"Overall GPA is:    {gpa_all_semesters:.2f}")
+        st.success(f"Overall GPA is:  \n{gpa_all_semesters:.2f}")
 
 
 if __name__ == "__main__":
