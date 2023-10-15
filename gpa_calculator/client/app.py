@@ -12,6 +12,7 @@ st.set_page_config(page_title="GPA Calculator", page_icon="👋", layout="wide")
 markdown_header(header="h1", text="MSc Computer Science GPA Calculator")
 st.divider()
 
+
 def gpa_calculator_interface():
     # ================================================================================ #
     # Initialize the GPA calculators
