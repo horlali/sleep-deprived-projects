@@ -14,6 +14,9 @@ st.divider()
 
 
 def gpa_calculator_interface():
+    """
+    this part of the code is messy, but I am too tired to refactor right now,
+    """
     # ================================================================================ #
     # Initialize the GPA calculators
     gpa_calculator_semester1 = GPACalculator()
