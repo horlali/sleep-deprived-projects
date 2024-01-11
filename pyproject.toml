@@ -9,6 +9,7 @@ packages = [{include = "gpa_calculator"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 streamlit = "^1.25.0"
+watchdog = "^3.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.0"
