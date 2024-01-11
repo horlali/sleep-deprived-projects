@@ -157,7 +157,7 @@ def gpa_calculator_interface():
 
     # Calculate GPA for all semesters
     with st.sidebar:
-        st.markdown("# Overall GPA")
+        st.markdown("# GPA Calculator")
         st.divider()
 
     with st.sidebar.expander("GPA for Semester 1", expanded=True):
