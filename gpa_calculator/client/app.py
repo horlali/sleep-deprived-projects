@@ -14,6 +14,9 @@ st.divider()
 
 
 def gpa_calculator_interface():
+    """
+    this part of the code is messy, but I am too tired to refactor right now,
+    """
     # ================================================================================ #
     # Initialize the GPA calculators
     gpa_calculator_semester1 = GPACalculator()
@@ -157,7 +160,7 @@ def gpa_calculator_interface():
 
     # Calculate GPA for all semesters
     with st.sidebar:
-        st.markdown("# Overall GPA")
+        st.markdown("# GPA Calculator")
         st.divider()
 
     with st.sidebar.expander("GPA for Semester 1", expanded=True):
